@@ -10,8 +10,8 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="https://www.svgrepo.com/show/219162/toolbox.svg" alt="">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="https://www.svgrepo.com/show/219162/toolbox.svg" alt="Toolbox">
         </a>
         <div>
           <ul class="navbar-nav mr-auto">
@@ -19,11 +19,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#"><strong>{{ user.username }}</strong></a>
                 </li>
-            {% endif %}
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'index' %}">Toolbox</a>
-            </li>
-            {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
                 </li>
