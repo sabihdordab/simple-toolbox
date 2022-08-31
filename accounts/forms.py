@@ -1,5 +1,5 @@
 from django import forms
-
+from .models import User
 class Register_form(forms.ModelForm):
     username = forms.TextInput()
     email = forms.EmailField()
