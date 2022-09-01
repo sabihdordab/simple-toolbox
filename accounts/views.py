@@ -19,6 +19,11 @@ def register(request):
         'form' : Register_form
         })
 
+
+def login_view(request):
+    pass
+
+
 def logout_view(request):
     logout(request)
     return HttpResponseRedirect(reverse("toolbox:index"))
