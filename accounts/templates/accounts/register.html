@@ -10,6 +10,13 @@
 {% endblock%}
 
 {% block body %}
+
+    {% if message %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+        </div>
+    {% endif %}
+
     <form action="{% url 'register'%}" method="Post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="container">
