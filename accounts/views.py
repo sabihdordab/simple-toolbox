@@ -10,13 +10,18 @@ def register(request):
         form = Register_form(request.POST)
         if form.is_valid:
             try:
-                form.save()
-                return HttpResponse("ok")
+                user = form.save()
             except:
-                return HttpResponse("this username already token")
-        
-    return render(request, 'accounts/register.html',{
-        'form' : Register_form
+                return render(request, "accounts/register.html", {
+                    "message": "Username already taken.",
+                    'form' : form
+                })
+
+            login(request, user)
+            return HttpResponseRedirect(reverse('toolbox:index'))
+    else:  
+        return render(request, 'accounts/register.html',{
+            'form' : Register_form
         })
 
 
