@@ -5,7 +5,6 @@ class Register_form(forms.ModelForm):
     email = forms.EmailField()
     attrs = {
         "type": "password",
-        'autocomplete':'off'
     }
     password = forms.CharField(widget=forms.TextInput(attrs=attrs))
     class Meta:
