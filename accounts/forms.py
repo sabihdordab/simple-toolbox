@@ -13,7 +13,7 @@ class Register_form(forms.ModelForm):
         
 
 class Login_form(forms.Form):
-    username = forms.TextInput()
+    username = forms.CharField(widget=forms.TextInput())
     attrs = {
         "type": "password"
     }

@@ -13,12 +13,17 @@ def register(request):
                 user = form.save()
             except:
                 return render(request, "accounts/register.html", {
-                    "message": "Username already taken.",
+                    "message": "Username already taken?",
                     'form' : form
                 })
 
             login(request, user)
             return HttpResponseRedirect(reverse('toolbox:index'))
+        else:
+            return render(request, "accounts/register.html", {
+                    "message": "Invalid Information.",
+                    'form' : form
+                })
     else:  
         return render(request, 'accounts/register.html',{
             'form' : Register_form
@@ -26,7 +31,26 @@ def register(request):
 
 
 def login_view(request):
-    pass
+    if request.method == "POST":
+        form = Login_form(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            try:
+                user = User.objects.get(username=username,password=password)
+                login(request, user)
+                return HttpResponseRedirect(reverse('toolbox:index'))
+            except:
+                pass
+            
+        return render(request, "accounts/login.html", {
+                "message": "Invalid username and/or password.",
+                'form' : form
+        })
+    else:
+        return render(request, 'accounts/login.html' , {
+            'form' : Login_form
+        })
 
 
 def logout_view(request):
