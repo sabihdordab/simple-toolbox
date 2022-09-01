@@ -1,8 +1,26 @@
 {% extends 'toolbox/layout.html'%}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'accounts/styles.css' %}">
+{% endblock %}
 
 {% block title %}
-    Register
+    Login
 {% endblock%}
 
 {% block body %}
+    <form action="{% url 'login'%}" method="Post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <label>Username</label>
+            {{ form.username }}
+            <label>Password</label>
+            {{ form.password }}
+            <br>
+            <input type="submit" class="btn btn-primary">
+            <br>
+            <p>Need an account?</p><a href="{% url 'register'%}">Sign up</a>
+        </div>
+    </form>
 {% endblock %}
