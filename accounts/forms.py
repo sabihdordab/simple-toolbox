@@ -3,8 +3,11 @@ from .models import User
 class Register_form(forms.ModelForm):
     username = forms.TextInput()
     email = forms.EmailField()
-    password = forms.PasswordInput()
-
+    attrs = {
+        "type": "password",
+        'autocomplete':'off'
+    }
+    password = forms.CharField(widget=forms.TextInput(attrs=attrs))
     class Meta:
         model = User
         fields = ['username','email','password']
