@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'toolbox',
-    'notepad'
+    'notepad',
+    'age_calculator'
 ]
 AUTH_USER_MODEL = 'accounts.User'
 

@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('',include('toolbox.urls')),
-    path('notepad/',include('notepad.urls'))
+    path('notepad/',include('notepad.urls')),
+    path('age_calculator/',include('age_calculator.urls'))
 ]
