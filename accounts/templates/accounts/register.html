@@ -19,7 +19,7 @@
 
     <form action="{% url 'register'%}" method="Post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="form-container">
+        <div class="container">
             <label>Username</label>
             {{ form.username }}
             <label>Email</label>
