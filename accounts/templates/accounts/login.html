@@ -17,7 +17,7 @@
     {% endif %}
     <form action="{% url 'login'%}" method="Post" enctype="multipart/form-data">
         {% csrf_token %}
-        <div class="container">
+        <div class="form-container">
             <label>Username</label>
             {{ form.username }}
             <label>Password</label>
