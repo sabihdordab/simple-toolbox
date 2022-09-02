@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'age_calculator'
 urlpatterns = [
-    
+    path('',views.index,name = 'index')
 ]
