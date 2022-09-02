@@ -8,12 +8,22 @@
 {% block style %}
     <link rel="stylesheet" href="{% static 'notepad/styles.css'%}">
 {% endblock %}
+{% block js %}
+    <script src="{% static 'notepad/index.js'%}"></script>
+{% endblock%}
 
 {% block body %}
     <div class="container">
+        <a href="" class="btn btn-primary">Notes</a>
         <a class="btn btn-primary">+</a>
     </div>
     <div id="notes">
 
+    </div>
+    <div id="add-new-note">
+        
+        
+        <hr>
+        <a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Github Markdown Syntax</a>
     </div>
 {% endblock %}
