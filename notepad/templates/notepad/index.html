@@ -1,8 +1,18 @@
 {% extends 'toolbox/layout.html' %}
+{% load static %}
 
 {% block title %}
     Notepad
 {% endblock %}
 
+{% block style %}
+    <link rel="stylesheet" href="{% static 'notepad/styles.css'%}">
+{% endblock %}
+
 {% block body %}
+    <div class="container">
+        <div class="item-0">
+            <a class="btn btn-primary">+</a>
+        </div>
+    </div>
 {% endblock %}
