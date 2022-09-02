@@ -26,12 +26,7 @@ function ageCalculator(){
         .then( response => response.json())
         .then( result => {
             message = document.querySelector('#message')
-            if(result.message == 'failed'){
-                message.innerHTML = result.message
-            }
-            else{
-                message.innerHTML = result.message
-            }
+            message.innerHTML = result.message
         })
     })
 }
