@@ -16,6 +16,9 @@
     <div class="container">
         <label for="birthday">Birthday:</label>
         <input type="date" id="birthday">
-        <a onclick="ageCalculator()" class="btn btn-primary">Calculate</a>
+        <a onclick="ageCalculator()" class="btn btn-primary" id="calculate">Calculate</a>
+        <div class="alert alert-light" role="alert" id="message">
+        </div>
     </div>
+    
 {% endblock %}
