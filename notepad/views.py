@@ -6,7 +6,8 @@ import datetime
 from markdown2 import Markdown
 
 def index(request):
-    if request.user.is_authenticated :
+    user = request.user
+    if user.is_authenticated :
         return render(request,'notepad/index.html',{
             'notes' : Note.objects.filter(author=user).all()
         })
