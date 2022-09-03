@@ -19,7 +19,11 @@
             <a id="add-note-btn" class="btn btn-primary">+</a>
         </div>
         <div id="notes-div">
-    
+            {% for note in notes %}
+                {% include 'notepad/notes_looks.html'%}
+            {% empty %}
+                no note
+            {% endfor %}
         </div>
         <div id="new-note-div">
             <form action="{% url 'notepad:add_note'%}" method="post" enctype="multipart/form-data">
