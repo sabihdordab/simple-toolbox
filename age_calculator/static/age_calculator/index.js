@@ -3,18 +3,16 @@ document.addEventListener('DOMContentLoaded',function(){
 })
 
 function ageCalculator(){
-    document.querySelector('#calculate').addEventListener('click',function(){
-        fetch('/age_calculator/calculate',{
-            method : "POST" ,
-            body :JSON.stringify({
-                date : document.querySelector('#birthday').value
-            })
+    fetch('/age_calculator/calculate',{
+        method : "POST" ,
+        body :JSON.stringify({
+            date : document.querySelector('#birthday').value
         })
-        .then( response => response.json())
-        .then( result => {
-            message = document.querySelector('#message');
-            message.innerHTML = result.message;
-            message.style.display = 'block';
-        })
+    })
+    .then( response => response.json())
+    .then( result => {
+        message = document.querySelector('#message');
+        message.innerHTML = result.message;
+        message.style.display = 'block';
     })
 }
