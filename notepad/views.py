@@ -55,6 +55,20 @@ def note_page(request,id):
     return render(request, 'notepad/note_page.html',{
         'title' : note.title ,
         'content' : Markdown().convert(note.content),
-        'date' : note.date.strftime('%Y-%m-%d')
+        'date' : note.date.strftime('%Y-%m-%d'),
+        'id' : note.id 
     })
     
+
+def delete_note(request,id):
+    user = request.user
+    try:
+        note = Note.objects.get(id=id)
+    except:
+        return HttpResponse(status=404)
+
+    if not user.is_authenticated or note.author != user:
+        return HttpResponse(status=404)
+    
+    note.delete()
+    return HttpResponseRedirect(reverse('notepad:index'))
