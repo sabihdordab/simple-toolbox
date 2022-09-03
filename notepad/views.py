@@ -23,10 +23,24 @@ def add_note(request):
         content = request.POST['content']
         note = Note(author=user,title=title,content=content,date=datetime.datetime.now())
         note.save()
-        HttpResponseRedirect(reverse('notepad:note',args=(id,)))
+        return HttpResponseRedirect(reverse('notepad:note',args=(id,)))
     else:
-        HttpResponse(status=405)
+        return HttpResponse(status=405)
 
 
 def note_page(request,id):
-    pass
+    user = request.user
+    note = Note.objects.get(id=id)
+
+    if not user.is_authenticated :
+        return HttpResponseRedirect(reverse('login'))
+
+    if note.author != user :
+        return HttpResponse(status=405)
+    
+    return render(request, 'notepad/note_page.html',{
+        'title' : note.title ,
+        'content' : Markdown().convert(note.content),
+        'date' : note.date.strftime('%Y-%m-%d')
+    })
+    

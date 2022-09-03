@@ -1,0 +1,24 @@
+{% extends 'toolbox/layout.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'notepad/styles.css'%}">
+{% endblock %}
+{% block js %}
+    <script src="{% static 'notepad/index.js'%}"></script>
+{% endblock%}
+
+{% block body %}
+    <div class="container">
+        {{ content|safe }}
+        <br>
+        <p>date : {{ date }}</p>
+        <hr>
+        <a class="btn btn-primary" id="edit-note">Edit</a>
+        <a href="" class="btn btn-danger" id="delete-note">Delete</a>
+    </div>
+{% endblock %}
