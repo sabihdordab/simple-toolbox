@@ -7,7 +7,9 @@ from markdown2 import Markdown
 
 def index(request):
     if request.user.is_authenticated :
-        return render(request,'notepad/index.html')
+        return render(request,'notepad/index.html',{
+            'notes' : Note.objects.filter(author=user).all()
+        })
     else:
         return HttpResponseRedirect(reverse('login'))
 
