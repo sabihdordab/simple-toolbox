@@ -87,7 +87,7 @@ def edit_note(request,id):
         note.save()
         return JsonResponse({
             'message' : 'done',
-            'content' : content 
+            'content' : note.content
         })
     else:
         return HttpResponse(status=405)
