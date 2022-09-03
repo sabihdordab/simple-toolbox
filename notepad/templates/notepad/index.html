@@ -23,13 +23,17 @@
     <div class="container">
 
         <div id="notes-div">
-            {% for note in notes %}
+            {% for note in page_object.object_list %}
                 {% include 'notepad/notes_looks.html'%}
             {% empty %}
                 <h1 class="container">
                     no note
                 </h1>
             {% endfor %}
+
+            <div>
+                {% include 'notepad/page_navigation.html '%}
+            </div>
         </div>
 
         <div id="new-note-div">

@@ -4,12 +4,20 @@ from django.urls import reverse
 from .models import Note
 import datetime
 from markdown2 import Markdown
+from django.core.paginator import Paginator
+
 
 def index(request):
     user = request.user
     if user.is_authenticated :
+
+        notes = Note.objects.filter(author=user).all().order_by('id').reverse()
+        paginator = Paginator( notes, 10)
+        page = request.GET['page']
+        page_object = paginator.get_page(page)
+
         return render(request,'notepad/index.html',{
-            'notes' : Note.objects.filter(author=user).all().order_by('id').reverse()
+            'page_object' : page_object
         })
     else:
         return HttpResponseRedirect(reverse('login'))
