@@ -9,7 +9,7 @@ def index(request):
     user = request.user
     if user.is_authenticated :
         return render(request,'notepad/index.html',{
-            'notes' : Note.objects.filter(author=user).all()
+            'notes' : Note.objects.filter(author=user).all().order_by('id').reverse()
         })
     else:
         return HttpResponseRedirect(reverse('login'))
