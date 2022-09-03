@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect , HttpResponse
+from django.http import HttpResponseRedirect , HttpResponse , JsonResponse
 from django.urls import reverse
 from .models import Note
 import datetime
 from markdown2 import Markdown
 from django.core.paginator import Paginator
+import json
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
@@ -72,3 +74,20 @@ def delete_note(request,id):
     
     note.delete()
     return HttpResponseRedirect(reverse('notepad:index'))
+
+@csrf_exempt
+def edit_note(request,id):
+    if request.method == "POST":
+        title = json.loads(request.body).get('editedTitle')
+        content = json.loads(request.body).get('editedContent')
+        note = Note.objects.get(id=id)
+        note.title = title
+        note.content = Markdown().convert(content)
+        note.date = datetime.datetime.now()
+        note.save()
+        return JsonResponse({
+            'message' : 'done',
+            'content' : content 
+        })
+    else:
+        return HttpResponse(status=405)
