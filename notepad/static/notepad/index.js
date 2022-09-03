@@ -27,3 +27,8 @@ function showAddNotePage(){
     document.querySelector('#notes-div').style.display= 'none';
     document.querySelector('#new-note-div').style.display= 'block';
 }
+
+
+function editNote(id){
+    document.querySelector('#note-div').style.display = 'none'
+}

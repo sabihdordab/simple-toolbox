@@ -14,13 +14,20 @@
 
 {% block body %}
     <div class="container">
-        <h1>{{ title }}</h1>
-        {{ content|safe }}
-        <br>
-        <p>date : {{ date }}</p>
-        <hr>
-        <a class="btn btn-primary" href="{% url 'notepad:index'%}">Back</a>
-        <a class="btn btn-primary" id="edit-note">Edit</a>
-        <a href="{% url 'notepad:delete' id %}" class="btn btn-danger" id="delete-note">Delete</a>
+        <div id="note-div">
+            <h1>{{ title }}</h1>
+            {{ content|safe }}
+            <br>
+            <p>date : {{ date }}</p>
+            <hr>
+            <a class="btn btn-primary" href="{% url 'notepad:index'%}">Back</a>
+            <a class="btn btn-primary" id="edit-note" onclick="editNote('{{ id }}')">Edit</a>
+            <a href="{% url 'notepad:delete' id %}" class="btn btn-danger" id="delete-note">Delete</a>
+        </div>
+
+        <div id="edit-note-div">
+            
+        </div>
     </div>
+
 {% endblock %}
