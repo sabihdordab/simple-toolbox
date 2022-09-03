@@ -18,13 +18,20 @@
             <a id="notes-btn" class="btn btn-primary">Notes</a>
             <a id="add-note-btn" class="btn btn-primary">+</a>
         </div>
+    </div>
+
+    <div class="container">
+
         <div id="notes-div">
             {% for note in notes %}
                 {% include 'notepad/notes_looks.html'%}
             {% empty %}
-                no note
+                <h1 class="container">
+                    no note
+                </h1>
             {% endfor %}
         </div>
+
         <div id="new-note-div">
             <form action="{% url 'notepad:add_note'%}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -41,5 +48,7 @@
             <hr>
             <a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Github Markdown Syntax</a>
         </div>
+
     </div>
+    
 {% endblock %}
