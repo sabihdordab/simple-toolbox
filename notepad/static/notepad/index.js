@@ -26,5 +26,4 @@ function showAddNotePage(){
     document.querySelector('#title').value = ""
     document.querySelector('#notes-div').style.display= 'none';
     document.querySelector('#new-note-div').style.display= 'block';
-    document.querySelector('#new-note-div').className = 'container';
 }
