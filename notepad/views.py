@@ -30,7 +30,10 @@ def add_note(request):
 
 def note_page(request,id):
     user = request.user
-    note = Note.objects.get(id=id)
+    try:
+        note = Note.objects.get(id=id)
+    except:
+        return HttpResponse(status=404)
 
     if not user.is_authenticated :
         return HttpResponseRedirect(reverse('login'))

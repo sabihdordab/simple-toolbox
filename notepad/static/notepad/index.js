@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     document.querySelector('#submit-note').disabled = true;
     
     document.querySelector('#content').onkeyup = function(){
@@ -14,11 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('#notes-btn').addEventListener('click',showNotes);
     document.querySelector('#add-note-btn').addEventListener('click',showAddNotePage);
     showNotes();
-
-    document.querySelector('#submit-note').addEventListener('click', () => {
-        document.querySelector('#content').value = ""
-        document.querySelector('#title').value = ""
-    })
 })
 
 function showNotes(){
