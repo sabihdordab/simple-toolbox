@@ -13,8 +13,8 @@ def index(request):
 
         notes = Note.objects.filter(author=user).all().order_by('id').reverse()
         paginator = Paginator( notes, 10)
-        page = request.GET['page']
-        page_object = paginator.get_page(page)
+        page_number = request.GET.get('page')
+        page_object = paginator.get_page(page_number)
 
         return render(request,'notepad/index.html',{
             'page_object' : page_object
