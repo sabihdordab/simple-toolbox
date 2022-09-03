@@ -7,3 +7,9 @@ def index(request):
         return render(request,'notepad/index.html')
     else:
         return HttpResponseRedirect(reverse('login'))
+
+def add_note(request):
+    if request.method == "POST":
+        pass
+    else:
+        HttpResponse(status=405)
