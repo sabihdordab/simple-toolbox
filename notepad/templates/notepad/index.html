@@ -15,13 +15,13 @@
 {% block body %}
     <div class="container-fuild">
         <div class="nav">
-            <a href="" class="btn btn-primary">Notes</a>
-            <a class="btn btn-primary">+</a>
+            <a id="notes-btn" class="btn btn-primary">Notes</a>
+            <a id="add-note-btn" class="btn btn-primary">+</a>
         </div>
-        <div id="notes">
+        <div id="notes-div">
     
         </div>
-        <div id="add-new-note">
+        <div id="new-note-div">
             <form action="" method="post" enctype="multipart/form-data">
                 <label>title</label>
                 <br>
@@ -31,7 +31,7 @@
                 <br>
                 <textarea name="content" rows="20" cols="60" id="content"></textarea>
                 <br>
-                <a class="btn btn-primary" id="add-note-btn">Submit</a>
+                <a class="btn btn-primary" id="submit-note">Submit</a>
             </form>
             <hr>
             <a href="https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Github Markdown Syntax</a>
