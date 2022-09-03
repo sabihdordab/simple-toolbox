@@ -73,13 +73,25 @@ function editNote(id){
 
 
     submit.addEventListener('click',function(){
-        if (!document.querySelector('#content-field').value.trim())
+        if (document.querySelector('#content-field').value.trim() && document.querySelector('#title-field').value.trim())
         {
-            alert("Note content can't be None");
+            fetch(`/notepad/edit/${id}`, {
+                method : 'POST',
+                body : JSON.stringify({
+                    editedTitle : document.querySelector('#title-field').value ,
+                    editedContent : document.querySelector('#content-field').value 
+                })
+            })
+            .then( response => response.json())
+            .then( result => {
+                editDiv.removeChild(div);
+                title.innerHTML = input.value ;
+                content.innerHTML = result.content ;
+                document.querySelector('#note-div').style.display = 'block';
+            })
         }
         else{
-            
-            editDiv.removeChild(div);
+            alert("Note content and title can't be None");
         }
     })
 }
