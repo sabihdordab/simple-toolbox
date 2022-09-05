@@ -7,6 +7,7 @@
 {% block body %}
     <div class="container">
         <div class="apps">
+            
             <div id="notepad">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{% static 'toolbox/icons/notepad-icon.png'%}">
@@ -17,6 +18,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="age-calculator">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{% static 'toolbox/icons/calculator-icon.png'%}">
@@ -24,6 +26,16 @@
                       <h5 class="card-title">Age Calculator</h5>
                       <p class="card-text">You can calculate the date range between two specific dates.</p>
                       <a href="{% url 'date_tools:age_calculator'%}" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+
+            <div id="date-converter">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'toolbox/icons/date-converter-icon.png'%}">
+                    <div class="card-body">
+                      <h5 class="card-title">Date Converter</h5>
+                      <p class="card-text">Convert AD date into Persian date.</p>
+                      <a href="{% url 'date_tools:date_converter'%}" class="btn btn-primary">Open</a>
                     </div>
                 </div>
             </div>
