@@ -8,6 +8,9 @@ from django.views.decorators.csrf import csrf_exempt
 def age_calculator(request):
     return render(request, 'date_tools/age_calculator.html')
 
+def date_converter(request):
+    return render(request, 'date_tools/date_converter.html')
+
 @csrf_exempt
 def calculate(request):
     if request.method == "POST":
