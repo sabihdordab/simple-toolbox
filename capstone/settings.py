@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'accounts',
     'toolbox',
     'notepad',
-    'date_tools'
+    'date_tools',
+    'time_tools'
 ]
 AUTH_USER_MODEL = 'accounts.User'
 
