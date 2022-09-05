@@ -14,12 +14,12 @@
 
 {% block body %}
     <div class="container">
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday">
+        <label>Date:</label>
+        <input type="date" id="date">
         <br>
-        <a onclick="ageCalculator()" class="btn btn-primary" id="calculate">Calculate</a>
+        <a onclick="dateConverter()" class="btn btn-primary" id="convert">Convert</a>
         <br>
-        <div class="alert alert-light" role="alert" id="range">
+        <div class="alert alert-light" role="alert" id="converted-date">
         </div>
     </div>
 {% endblock %}

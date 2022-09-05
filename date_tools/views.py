@@ -23,8 +23,17 @@ def calculate(request):
     else:
         return HttpResponse(status=404)
 
-
 @csrf_exempt
 def convert(request):
-    pass
+    if request.method == "POST":
+        data = json.loads(request.body).get('date')
+        try:
+            date = datetime.strptime(data.strip(),"%Y-%m-%d")
+            converted_date = JalaliDate(date)
+            message = converted_date.strftime("%d/%m/%Y")
+        except:
+            message = 'failed'
+        return JsonResponse({'message': message })
+    else:
+        return HttpResponse(status=404)
 
