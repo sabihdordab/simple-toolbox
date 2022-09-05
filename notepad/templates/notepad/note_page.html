@@ -13,6 +13,11 @@
 {% endblock%}
 
 {% block body %}
+    <div class="container-fuild">
+        <div class="nav">
+            <a class="btn btn-primary" href="{% url 'notepad:index'%}">back</a>
+        </div>
+    </div>
     <div class="container">
         <div id="note-div">
             <h1 id="note-title">{{ title }}</h1>
@@ -22,7 +27,6 @@
             <br>
             <p>date : {{ date }}</p>
             <hr>
-            <a class="btn btn-primary" href="{% url 'notepad:index'%}">Back</a>
             <a class="btn btn-primary" id="edit-note" onclick="editNote('{{ id }}')">Edit</a>
             <a href="{% url 'notepad:delete' id %}" class="btn btn-danger" id="delete-note">Delete</a>
         </div>
