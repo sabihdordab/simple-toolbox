@@ -1,8 +1,31 @@
 {% extends 'toolbox/layout.html'%}
-
+{% load static %}
 {% block title %}
     Toolbox
 {% endblock %}
 
 {% block body %}
+    <div class="container">
+        <div class="apps">
+            <div id="notepad">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'toolbox/icons/notepad-icon.png'%}">
+                    <div class="card-body">
+                      <h5 class="card-title">Notepad</h5>
+                      <p class="card-text">You can have you're notes here.</p>
+                      <a href="{% url 'notepad:index'%}" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+            <div id="age-calculator">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'toolbox/icons/calculator-icon.png'%}">
+                    <div class="card-body">
+                      <h5 class="card-title">Age Calculator</h5>
+                      <p class="card-text">You can calculate the date range between two specific dates.</p>
+                      <a href="{% url 'notepad:index'%}" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
+    </div>
 {% endblock %}
