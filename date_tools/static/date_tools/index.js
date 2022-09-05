@@ -13,7 +13,8 @@ function ageCalculator(){
     fetch('/date_tools/calculate',{
         method : "POST" ,
         body :JSON.stringify({
-            date : document.querySelector('#birthday').value
+            firstDate : document.querySelector('#first-date').value,
+            secondDate : document.querySelector('#second-date').value,
         })
     })
     .then( response => response.json())

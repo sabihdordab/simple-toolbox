@@ -15,11 +15,12 @@ def date_converter(request):
 @csrf_exempt
 def calculate(request):
     if request.method == "POST":
-        data = json.loads(request.body).get('date')
+        data1 = json.loads(request.body).get('firstDate')
+        data2 = json.loads(request.body).get('secondDate')
         try:
-            date = datetime.strptime(data.strip(),"%Y-%m-%d")
-            now = datetime.now()
-            delta = relativedelta.relativedelta(now,date)
+            first_date = datetime.strptime(data1,"%Y-%m-%d")
+            second_date = datetime.strptime(data2,"%Y-%m-%d")
+            delta = relativedelta.relativedelta( second_date , first_date )
             message = f'{delta.years} Years , {delta.months} Month , {delta.days} Days'
         except:
             message = 'failed'
@@ -32,7 +33,7 @@ def convert(request):
     if request.method == "POST":
         data = json.loads(request.body).get('date')
         try:
-            date = datetime.strptime(data.strip(),"%Y-%m-%d")
+            date = datetime.strptime(data,"%Y-%m-%d")
             converted_date = JalaliDate(date)
             message = converted_date.strftime("%d/%m/%Y")
         except:
