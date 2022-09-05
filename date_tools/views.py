@@ -5,8 +5,8 @@ from datetime import datetime
 from dateutil import relativedelta
 from django.views.decorators.csrf import csrf_exempt
 
-def index(request):
-    return render(request, 'age_calculator/index.html')
+def age_calculator(request):
+    return render(request, 'date_tools/age_calculator.html')
 
 @csrf_exempt
 def calculate(request):
@@ -22,3 +22,9 @@ def calculate(request):
         return JsonResponse({'message': message })
     else:
         return HttpResponse(status=404)
+
+
+@csrf_exempt
+def convert(request):
+    pass
+

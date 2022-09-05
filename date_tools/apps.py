@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AgeCalculatorConfig(AppConfig):
+class DateToolsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'age_calculator'
+    name = 'date_tools'

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',function(){
 })
 
 function ageCalculator(){
-    fetch('/age_calculator/calculate',{
+    fetch('/date_tools/calculate',{
         method : "POST" ,
         body :JSON.stringify({
             date : document.querySelector('#birthday').value

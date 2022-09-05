@@ -21,5 +21,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('',include('toolbox.urls')),
     path('notepad/',include('notepad.urls')),
-    path('age_calculator/',include('age_calculator.urls'))
+    path('date_tools/',include('date_tools.urls'))
 ]
