@@ -40,5 +40,16 @@
                     </div>
                 </div>
             </div>
+
+            <div id="time-tools">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{% static 'toolbox/icons/time.png'%}">
+                    <div class="card-body">
+                      <h5 class="card-title">StopWatch</h5>
+                      <p class="card-text">Record time?used to time races.</p>
+                      <a href="{% url 'time_tools:stopwatch'%}" class="btn btn-primary">Open</a>
+                    </div>
+                </div>
+            </div>
     </div>
 {% endblock %}
