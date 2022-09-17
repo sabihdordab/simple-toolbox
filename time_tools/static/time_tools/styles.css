@@ -3,3 +3,18 @@
     flex-wrap: wrap;
 }
 
+.container{
+    border-radius: 100px;
+    padding: 100px;
+    box-shadow: #3a3032 0px 50px 100px -20px, #fe0036 0px 30px 60px -30px, #fe0036 0px -2px 6px 0px inset;
+    margin-top: 30px;
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.time {
+    font-size: xx-large;
+}
