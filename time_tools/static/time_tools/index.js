@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",function(){
         seconds = 0;
         minutes = 0 ;
         hours = 0 ;
-        millisecondsLBL.innerHTML = milliseconds + ":";
+        millisecondsLBL.innerHTML = milliseconds;
         secondsLBL.innerHTML = seconds + ":";
         minutesLBL.innerHTML = minutes + ":";
         hoursLBL.innerHTML = hours + ":";
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded",function(){
    }
 
    function timer () {
-    millisecondsLBL.innerHTML = milliseconds + ":";
+    millisecondsLBL.innerHTML = milliseconds ;
     secondsLBL.innerHTML = seconds + ":";
     minutesLBL.innerHTML = minutes + ":";
     hoursLBL.innerHTML = hours + ":";
