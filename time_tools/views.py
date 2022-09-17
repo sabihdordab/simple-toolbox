@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def index(request):
-    return render(request,'time_tools/index.html')
+def stopwatch(request):
+    return render(request,'time_tools/stopwatch.html')
