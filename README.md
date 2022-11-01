@@ -2,7 +2,7 @@
  
  ## Distinctiveness and Complexity:
  This Project is not similar to anything we have already created. My project is a Toolbox,
-About complexity, I tryed to use javascript more and i used forms in another way that connected to User model and...(forms.py file in account applation) , all of the web application is responsive to the different screen sizes and...
+About complexity, I tried to use javascript more and i used forms in another way that connected to User model and...(forms.py file in account applation) , all of the web application is responsive to the different screen sizes and...
 
 ## About Project:
 I have created a toolbox which has Time_tools , Date_tools , Notepad and Accounts applications.
@@ -20,9 +20,9 @@ I have created a toolbox which has Time_tools , Date_tools , Notepad and Account
 
 
 ### Css and Sass files: 
-Techniques like flexbox and grid are used and tryed to have a responsive project and...
+Techniques like flexbox and grid are used and tried to have a responsive project and...
 ### templates folders :
-a layout file (in toolbox application). other HTML files created for all of the different operations explained below.
+a layout file (in toolbox application). other HTML files created for all of the different operations as i explained below.
 
 
 ### Toolbox App:
@@ -40,7 +40,7 @@ a note model that store the author , title , content and date.
 views.py :
 to writing notes can use **Markdown** , also we can edit and delete notes.. , in main page of notepad i used Paginator and ..
 index.js :
-functions to check that the content is not empty and something like that...
+functions to check that the content is not empty and other simillar functions.
 ### Date Tools App:
 views.py :
 we have two functions :
