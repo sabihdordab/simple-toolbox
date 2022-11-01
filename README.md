@@ -8,13 +8,13 @@ About complexity, I tryed to use javascript more and i used forms in another way
 I have created a toolbox which has Time_tools , Date_tools , Notepad and Accounts applications.
 ### technologies :
 * Back-end : 
-- Python
-- SQLite
+*Python*
+*SQLite*
 * Front-end :
-- HTML
-- CSS / Sass
-- Java script
-- Bootstrap
+*HTML*
+*CSS / Sass*
+*Java script*
+*Bootstrap*
 
 ## Project Informations :
 
@@ -53,5 +53,5 @@ usnig Json ... sending request to server and getting response and showing a resu
 ### Time Tools App :
 just a Js stopwatch.
 ## How to run the Project:
--Install project dependencies by running pip install -r requirements.txt
--Make and apply migrations by running python manage.py makemigrations and python manage.py migrate.
+- Install project dependencies by running pip install -r requirements.txt
+- Make and apply migrations by running python manage.py makemigrations and python manage.py migrate.
