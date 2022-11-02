@@ -55,5 +55,5 @@ Usnig Json ... sending request to server and getting response and showing a resu
 ### Time Tools App :
 Just a Js stopwatch.
 ## How to run the Project:
-- Install project dependencies by running pip install -r requirements.txt
-- Make and apply migrations by running python manage.py makemigrations and python manage.py migrate.
+- Install project dependencies by running **pip install -r requirements.txt**
+- Make and apply migrations by running **python manage.py makemigrations** and **python manage.py migrate**.
