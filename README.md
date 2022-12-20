@@ -5,7 +5,7 @@ I have created a toolbox which has collected several apps , the toolbox has Time
 User can register/login and use toolbox. 
 ### Notepad App :
 The user can write/edit/delete her/his notes in it , To writing notes can use **Markdown**
-#### whats Markdown : 
+#### Whats Markdown?
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
 [github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ### Time Tools App :
