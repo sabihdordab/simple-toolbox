@@ -22,6 +22,7 @@ User can calculate the date range between two specific dates.
 **Back-end** : 
 - *Python*
 - *SQLite*
+
 **Front-end** :
 - *HTML*
 - *CSS / Sass*
@@ -42,10 +43,10 @@ i tried to use javascript more than before and i used forms in another way that 
 # File structure description and summary 
 
 ```.
-├── accounts *-> Purpose : login , register logout and accounts.*
+├── accounts -> Purpose : login , register logout and accounts.
 │   ├── admin.py
 │   ├── apps.py
-│   ├── forms.py *-> Register and login form that connected to User model in models.py , forms includes email , username , password .*
+│   ├── forms.py -> Register and login form that connected to User model in models.py , forms includes email , username , password .
 │   ├── __init__.py
 │   ├── migrations
 │   │   ├── 0001_initial.py
@@ -55,7 +56,7 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │       ├── 0001_initial.cpython-39.pyc
 │   │       ├── __init__.cpython-310.pyc
 │   │       └── __init__.cpython-39.pyc
-│   ├── models.py *-> User Model that inheritance from AbstractUser*
+│   ├── models.py -> User Model that inheritance from AbstractUser
 │   ├── __pycache__
 │   │   ├── admin.cpython-310.pyc
 │   │   ├── admin.cpython-39.pyc
@@ -73,14 +74,14 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-39.pyc
 │   ├── static
 │   │   └── accounts
-│   │       └── styles.css *-> styles of login/register display*
+│   │       └── styles.css -> styles of login/register display
 │   ├── templates
 │   │   └── accounts
-│   │       ├── login.html *-> login form display*
-│   │       └── register.html *-> register form display*
+│   │       ├── login.html -> login form display
+│   │       └── register.html -> register form display
 │   ├── tests.py
-│   ├── urls.py *-> Logout , login , register urls*
-│   └── views.py *-> Register , Login and Logout Func , If the user enters wrong information or has already registered, she/he cannot register.*
+│   ├── urls.py -> Logout , login , register urls
+│   └── views.py -> Register , Login and Logout Func , If the user enters wrong information or has already registered, she/he cannot register.
 ├── capstone *-> Core application*
 │   ├── asgi.py
 │   ├── __init__.py
@@ -94,7 +95,7 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   ├── wsgi.cpython-310.pyc
 │   │   └── wsgi.cpython-39.pyc
 │   ├── settings.py 
-│   ├── urls.py *-> apps urls*
+│   ├── urls.py -> apps urls
 │   └── wsgi.py
 ├── date_tools
 │   ├── admin.py
@@ -118,15 +119,15 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-310.pyc
 │   ├── static
 │   │   └── date_tools
-│   │       ├── index.js *-> Date tools func to send value of Field to related func(server) in views.py and receive response and show result in Page (to have a more dynamic app)*
+│   │       ├── index.js -> Date tools func to send value of Field to related func(server) in views.py and receive response and show result in Page (to have a more dynamic app)
 │   │       └── styles.css 
 │   ├── templates
 │   │   └── date_tools
-│   │       ├── age_calculator.html *-> display of a html form , user must enter two date.*
-│   │       └── date_converter.html *-> display of a html form , user must enter a date.*
+│   │       ├── age_calculator.html -> display of a html form , user must enter two date.
+│   │       └── date_converter.html -> display of a html form , user must enter a date.
 │   ├── tests.py
 │   ├── urls.py
-│   └── views.py *-> two func : 1-calculate : To calculate the distance between two dates(AD) 2-convert:To convert a  AD date to SD date.*
+│   └── views.py -> two func : 1-calculate : To calculate the distance between two dates(AD) 2-convert:To convert a  AD date to SD date.
 ├── db.sqlite3
 ├── manage.py
 ├── notepad
@@ -141,7 +142,7 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │       ├── 0001_initial.cpython-39.pyc
 │   │       ├── __init__.cpython-310.pyc
 │   │       └── __init__.cpython-39.pyc
-│   ├── models.py *-> a note model to store the author , title , content and date.*
+│   ├── models.py -> a note model to store the author , title , content and date.
 │   ├── __pycache__
 │   │   ├── admin.cpython-310.pyc
 │   │   ├── admin.cpython-39.pyc
@@ -157,17 +158,17 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-39.pyc
 │   ├── static
 │   │   └── notepad
-│   │       ├── index.js *-> Functions to check that the content is not empty and other simillar functions.*
+│   │       ├── index.js -> Functions to check that the content is not empty and other simillar functions.
 │   │       └── styles.css
 │   ├── templates
 │   │   └── notepad
-│   │       ├── index.html * -> showing all notes card and writing new note..*
-│   │       ├── note_page.html *-> showing the choesen note title , text , date ...*
-│   │       ├── notes_looks.html * -> notes card*
-│   │       └── page_navigation.html * -> to only 10 note in a page*
+│   │       ├── index.html  -> showing all notes card and writing new note..
+│   │       ├── note_page.html -> showing the choesen note title , text , date ...
+│   │       ├── notes_looks.html -> notes card
+│   │       └── page_navigation.html -> to only 10 note in a page
 │   ├── tests.py
 │   ├── urls.py
-│   └── views.py *->Functions to writing ,edit and delete notes,in main page of notepad(index page related to index func) i used Paginator(only show 10 note in one page)*
+│   └── views.py ->Functions to writing ,edit and delete notes,in main page of notepad(index page related to index func) i used Paginator(only show 10 note in one page)
 ├── Pipfile
 ├── Pipfile.lock
 ├── README.md
@@ -190,15 +191,15 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-310.pyc
 │   ├── static
 │   │   └── time_tools
-│   │       ├── index.js *-> stop BTN , reset BTN , start BTN and timer func to set time*
+│   │       ├── index.js -> stop BTN , reset BTN , start BTN and timer func to set time
 │   │       └── styles.css
 │   ├── templates
 │   │   └── time_tools
 │   │       └── stopwatch.html
 │   ├── tests.py
 │   ├── urls.py
-│   └── views.py * -> render the stop watch display*
-└── toolbox *-> Purpose :To display the main page of project , other project page inherit from layout.html of this app.*
+│   └── views.py -> render the stop watch display
+└── toolbox -> Purpose :To display the main page of project , other project page inherit from layout.html of this app.
     ├── admin.py
     ├── apps.py
     ├── __init__.py
@@ -235,11 +236,11 @@ i tried to use javascript more than before and i used forms in another way that 
     │       └── toolbox-svgrepo-com.svg
     ├── templates
     │   └── toolbox
-    │       ├── index.html *-> app's cards and information*
-    │       └── layout.html * -> project navbar*
+    │       ├── index.html -> app's cards and information
+    │       └── layout.html -> project navbar
     ├── tests.py
     ├── urls.py
-    └── views.py *-> if user is_authenticated -> main page of toolbox , else -> login page *
+    └── views.py -> if user is_authenticated -> main page of toolbox , else -> login page
 ```
 ### Templates folders :
 A layout file (in toolbox application). other HTML files created for all of the different operations as i explained below. 
