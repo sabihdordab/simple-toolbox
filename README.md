@@ -41,7 +41,7 @@ i tried to use javascript more than before and i used forms in another way that 
 
 # File structure description and summary 
 
-.
+```.
 ├── accounts *-> Purpose : login , register logout and accounts.*
 │   ├── admin.py
 │   ├── apps.py
@@ -240,8 +240,7 @@ i tried to use javascript more than before and i used forms in another way that 
     ├── tests.py
     ├── urls.py
     └── views.py *-> if user is_authenticated -> main page of toolbox , else -> login page *
-   
-
+```
 ### Templates folders :
 A layout file (in toolbox application). other HTML files created for all of the different operations as i explained below. 
     
