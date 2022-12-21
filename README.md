@@ -243,7 +243,7 @@ i tried to use javascript more than before and i used forms in another way that 
     └── views.py -> if user is_authenticated -> main page of toolbox , else -> login page
 ```
 ### Templates folders :
-A layout file (in toolbox application). other HTML files created for all of the different operations as i explained below. 
+A layout file (in toolbox application). other HTML files created for all of the different operations as i explained before. 
     
 ### Css and Sass files: 
 Techniques like flexbox are used and tried to have a responsive project.
