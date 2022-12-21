@@ -1,16 +1,16 @@
- # CS50 Web Programming Final Project
+# CS50 Web Programming Final Project
  
 ## About Project:
 I have created a toolbox which has collected several apps , the toolbox has Time tools , Date tools and Notepad.
-User can register/login and use toolbox. 
+User can register and login and use toolbox. 
 ### Notepad App :
-The user can write/edit/delete her/his notes in it , To writing notes can use **Markdown**
+The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown**
 #### Whats Markdown?
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. 
 [github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ### Time Tools App :
 Time tools app Includes a stop watch to record time , used to time races.
-Time tools app can develope to be more useful such as countdown timer and show time zones.
+Time tools app can develope to become more useful such as countdown timer and show time zones.
 ### Date Tools App :
 Date tools have two features:
 #### 1.Date Converter :
@@ -74,7 +74,7 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-39.pyc
 │   ├── static
 │   │   └── accounts
-│   │       └── styles.css -> styles of login/register display
+│   │       └── styles.css -> styles of login and register display
 │   ├── templates
 │   │   └── accounts
 │   │       ├── login.html -> login form display
@@ -158,17 +158,17 @@ i tried to use javascript more than before and i used forms in another way that 
 │   │   └── views.cpython-39.pyc
 │   ├── static
 │   │   └── notepad
-│   │       ├── index.js -> Functions to check that the content is not empty and other simillar functions.
+│   │       ├── index.js -> Functions to check that the content is not empty and other similar functions.
 │   │       └── styles.css
 │   ├── templates
 │   │   └── notepad
 │   │       ├── index.html  -> showing all notes card and writing new note..
-│   │       ├── note_page.html -> showing the choesen note title , text , date ...
+│   │       ├── note_page.html -> showing the chosen note title , text , date ...
 │   │       ├── notes_looks.html -> notes card
-│   │       └── page_navigation.html -> to only 10 note in a page
+│   │       └── page_navigation.html -> to only 10 notes in a page
 │   ├── tests.py
 │   ├── urls.py
-│   └── views.py ->Functions to writing ,edit and delete notes,in main page of notepad(index page related to index func) i used Paginator(only show 10 note in one page)
+│   └── views.py ->Functions to write,edit and delete notes,in main page of notepad(index page related to index func) i used Paginator(only show 10 note in one page)
 ├── Pipfile
 ├── Pipfile.lock
 ├── README.md
