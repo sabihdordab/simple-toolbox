@@ -28,14 +28,6 @@ function showAddNotePage(){
     document.querySelector('#new-note-div').style.display= 'block';
 }
 
-
-function editNote(id){
-    document.querySelector('#content').value = ""
-    document.querySelector('#title').value = ""
-    document.querySelector('#notes-div').style.display= 'none';
-    document.querySelector('#new-note-div').style.display= 'block';
-}
-
 function editNote(id){
     document.querySelector('#note-div').style.display = 'none';
     const title = document.querySelector('#note-title');
@@ -56,12 +48,18 @@ function editNote(id){
     let submit = document.createElement('button');
     textarea.className = 'form-control';
     input.className = 'form-control';
-    input.value = title.innerHTML;
-    textarea.value = content.innerHTML;
     textarea.style.width = '100%';
     title.style.width = '100%';
     submit.innerHTML = "Submit";
     submit.className = 'btn btn-primary';
+    
+    fetch(`/notepad/edit/${id}`)
+    .then(response => response.json())
+    .then(data => {
+            
+            input.value = data['title'];
+            textarea.value = data['content'];
+    })
     div.appendChild(titleLabel)
     div.appendChild(input);
     div.appendChild(contentLabel);
@@ -70,8 +68,7 @@ function editNote(id){
     div.appendChild(submit);
     div.style.margin = '20px';
     editDiv.appendChild(div);
-
-
+    
     submit.addEventListener('click',function(){
         if (document.querySelector('#content-field').value.trim() && document.querySelector('#title-field').value.trim())
         {

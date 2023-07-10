@@ -7,7 +7,7 @@ from markdown2 import Markdown
 from django.core.paginator import Paginator
 import json
 from django.views.decorators.csrf import csrf_exempt
-
+import markdownify
 
 def index(request):
     user = request.user
@@ -77,10 +77,10 @@ def delete_note(request,id):
 
 @csrf_exempt
 def edit_note(request,id):
+    note = Note.objects.get(id=id)
     if request.method == "POST":
         title = json.loads(request.body).get('editedTitle')
         content = json.loads(request.body).get('editedContent')
-        note = Note.objects.get(id=id)
         note.title = title
         note.content = Markdown().convert(content)
         note.date = datetime.datetime.now()
@@ -89,5 +89,12 @@ def edit_note(request,id):
             'message' : 'done',
             'content' : note.content
         })
+    elif request.method == "GET":
+        return JsonResponse(
+            {
+                'title': note.title,
+                'content': markdownify.markdownify(note.content)
+            }
+        )
     else:
         return HttpResponse(status=405)
