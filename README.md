@@ -15,9 +15,10 @@ User can register and login,after logging in, the user can access the apps and u
   The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown** .
   Each user can see a maximum of 10 notes in one page, and then the rest of the notes go to the next page.
   The notes are sorted based on the time they were written so the newest note is higher than the rest.
-    - ![Add note page](./pics/add-note.png)
-    - ![Notes page](./pics/notes.png)
-    - ![Note page](./pics/note.png)
+  ![Add note page](./pics/add-note.png)
+  ![Notes page](./pics/notes.png)
+  ![Note page](./pics/note.png)
+
   - #### Whats Markdown?
     Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
     [github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
@@ -27,7 +28,7 @@ User can register and login,after logging in, the user can access the apps and u
   Time tools app Includes a stopwatch to record time , used to time races.
   This stopwatch is based on milliseconds and has a start, stop and reset button.
   Time tools app can develope to become more useful such as countdown timer and show timezones.
-  - ![Stopwatch page](./pics/stopwatch.png)
+  ![Stopwatch page](./pics/stopwatch.png)
 
 - ### Date Tools App :
   Date tools have two features:
@@ -37,7 +38,6 @@ User can register and login,after logging in, the user can access the apps and u
   - #### 2.Age Calculator :
     User can calculate the date range between two specific dates.
     ![Age calculator page](./pics/agecalculator.png)
-
 
 ### Technologies :
 
@@ -62,8 +62,13 @@ User can register and login,after logging in, the user can access the apps and u
 
 ## Distinctiveness and Complexity:
 
-Idea of this project is related to my first javaFX project and i have tried to program and develope that project with Django and this project is totally different from my previous CS50 projects.
-i tried to use javascript more than before and i used forms in another way that connected to User model (forms.py file in account application) ,Techniques like flexbox are used and tried to have a responsive project to the different screen sizes.
+The idea of this project is related to my first JavaFX project and I have tried to program and develop that project with Django.
+The idea of ​​using markdown is gotten from the Wiki project.
+The idea of using pagination gotten from the Network project.
+This project is totally different from my previous CS50 projects, although.
+Also tried to use javascript more than before, Ex: All calculations of the stopwatch are with javascript.
+About forms.py in the account application : I used forms in a way that connected to the User model.
+Techniques like Flexbox are used and tried to have a responsive project to the different screen sizes.
 
 # File structure description and summary
 
