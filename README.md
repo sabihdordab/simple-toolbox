@@ -3,33 +3,41 @@
 ## About Project:
 
 I have created a toolbox which has collected several apps , the toolbox has Time tools , Date tools and Notepad.
-User can register and login and use toolbox.
+User can register and login,after logging in, the user can access the apps and use toolbox.
+![Register page](./pics/register.png)
 
-### Notepad App :
+![Login page](./pics/login.png)
 
-The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown**
+![Home page](./pics/home.png)
 
-#### Whats Markdown?
+- ### Notepad App :
 
-Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
-[github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+  The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown** .
+  Each user can see a maximum of 10 notes in one page, and then the rest of the notes go to the next page.
+  The notes are sorted based on the time they were written so the newest note is higher than the rest.
+    - ![Add note page](./pics/add-note.png)
+    - ![Notes page](./pics/notes.png)
+    - ![Note page](./pics/note.png)
+  - #### Whats Markdown?
+    Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
+    [github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-### Time Tools App :
+- ### Time Tools App :
 
-Time tools app Includes a stop watch to record time , used to time races.
-Time tools app can develope to become more useful such as countdown timer and show time zones.
+  Time tools app Includes a stopwatch to record time , used to time races.
+  This stopwatch is based on milliseconds and has a start, stop and reset button.
+  Time tools app can develope to become more useful such as countdown timer and show timezones.
+  - ![Stopwatch page](./pics/stopwatch.png)
 
-### Date Tools App :
+- ### Date Tools App :
+  Date tools have two features:
+  - #### Date Converter :
+    Use to convert AD date into SD date.
+    ![Date converter page](./pics/dateconverter.png)
+  - #### 2.Age Calculator :
+    User can calculate the date range between two specific dates.
+    ![Age calculator page](./pics/agecalculator.png)
 
-Date tools have two features:
-
-#### 1.Date Converter :
-
-Use to convert AD date into SD date.
-
-#### 2.Age Calculator :
-
-User can calculate the date range between two specific dates.
 
 ### Technologies :
 
@@ -55,7 +63,7 @@ User can calculate the date range between two specific dates.
 ## Distinctiveness and Complexity:
 
 Idea of this project is related to my first javaFX project and i have tried to program and develope that project with Django and this project is totally different from my previous CS50 projects.
-i tried to use javascript more than before and i used forms in another way that connected to User model (forms.py file in account applation) , all of the web applications are responsive to the different screen sizes.
+i tried to use javascript more than before and i used forms in another way that connected to User model (forms.py file in account application) ,Techniques like flexbox are used and tried to have a responsive project to the different screen sizes.
 
 # File structure description and summary
 
@@ -187,11 +195,3 @@ i tried to use javascript more than before and i used forms in another way that 
     └── views.py
 
 ```
-
-### Templates folders :
-
-A layout file (in toolbox application). other HTML files created for all of the different operations as i explained before.
-
-### Css and Sass files:
-
-Techniques like flexbox are used and tried to have a responsive project.
