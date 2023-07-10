@@ -2,9 +2,9 @@
 
 ## About Project:
 
-I have created a toolbox which has collected several apps , the toolbox has Time tools , Date tools and Notepad.
-User can register and login,after logging in, the user can access the apps and use toolbox.
-[Project video](https://youtu.be/09GLhTwTgoI)
+I have created a toolbox that has collected several apps, the toolbox has Time tools, Date tools, and Notepad.
+The user can register and log in, after logging in, the user can access the apps and use the toolbox.
+[Project video](https://youtu.be/MP08RsSu41s)
 
 ![Register page](./pics/register.png)
 
@@ -14,23 +14,23 @@ User can register and login,after logging in, the user can access the apps and u
 
 - ### Notepad App :
 
-  The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown** .
-  Each user can see a maximum of 10 notes in one page, and then the rest of the notes go to the next page.
+  The user can write, edit and delete her/his notes in it. To write notes can use **Markdown**.
+  Each user can see a maximum of 10 notes on one page, and then the rest of the notes go to the next page.
   The notes are sorted based on the time they were written so the newest note is higher than the rest.
 
   ![Add note page](./pics/add-note.png)
   ![Notes page](./pics/notes.png)
   ![Note page](./pics/note.png)
 
-  - #### Whats Markdown?
+  - #### What's Markdown?
     Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
     [github markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 - ### Time Tools App :
 
-  Time tools app Includes a stopwatch to record time , used to time races.
+  Time tools app Includes a stopwatch to record time, used to time races.
   This stopwatch is based on milliseconds and has a start, stop and reset button.
-  Time tools app can develope to become more useful such as countdown timer and show timezones.
+  Time tools apps can develop to become more useful such as countdown timers and show timezones.
   ![Stopwatch page](./pics/stopwatch.png)
 
 - ### Date Tools App :
@@ -40,7 +40,7 @@ User can register and login,after logging in, the user can access the apps and u
     Use to convert AD date into SD date.
     ![Date converter page](./pics/dateconverter.png)
   - #### Age Calculator :
-    User can calculate the date range between two specific dates.
+    Users can calculate the date range between two specific dates.
     ![Age calculator page](./pics/agecalculator.png)
 
 ### Technologies :
@@ -70,7 +70,7 @@ The idea of ​​using markdown is gotten from the Wiki project.
 The idea of using pagination gotten from the Network project.
 This project is totally different from my previous CS50 projects, although.
 Also tried to use javascript more than before, Ex: All calculations of the stopwatch are with javascript.
-About register form (forms.py in the account application) : I used forms in a way that connected to the User model so don't have to create a new User object in views.
+About register form (forms.py in the account application): I used forms in a way that connected to the User model so don't have to create a new User object in views.
 Techniques like Flexbox are used and tried to have a responsive project to the different screen sizes.
 
 # File structure description and summary
