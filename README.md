@@ -4,6 +4,8 @@
 
 I have created a toolbox which has collected several apps , the toolbox has Time tools , Date tools and Notepad.
 User can register and login,after logging in, the user can access the apps and use toolbox.
+[Project video](https://youtu.be/09GLhTwTgoI)
+
 ![Register page](./pics/register.png)
 
 ![Login page](./pics/login.png)
@@ -15,6 +17,7 @@ User can register and login,after logging in, the user can access the apps and u
   The user can write,edit and delete her/his notes in it.To writing notes can use **Markdown** .
   Each user can see a maximum of 10 notes in one page, and then the rest of the notes go to the next page.
   The notes are sorted based on the time they were written so the newest note is higher than the rest.
+
   ![Add note page](./pics/add-note.png)
   ![Notes page](./pics/notes.png)
   ![Note page](./pics/note.png)
@@ -31,11 +34,12 @@ User can register and login,after logging in, the user can access the apps and u
   ![Stopwatch page](./pics/stopwatch.png)
 
 - ### Date Tools App :
+
   Date tools have two features:
   - #### Date Converter :
     Use to convert AD date into SD date.
     ![Date converter page](./pics/dateconverter.png)
-  - #### 2.Age Calculator :
+  - #### Age Calculator :
     User can calculate the date range between two specific dates.
     ![Age calculator page](./pics/agecalculator.png)
 
@@ -53,7 +57,6 @@ User can register and login,after logging in, the user can access the apps and u
 - _Java script_
 - _Bootstrap_
 
-[Project video](https://youtu.be/09GLhTwTgoI)
 
 ## How to run the Project:
 
@@ -67,7 +70,7 @@ The idea of ​​using markdown is gotten from the Wiki project.
 The idea of using pagination gotten from the Network project.
 This project is totally different from my previous CS50 projects, although.
 Also tried to use javascript more than before, Ex: All calculations of the stopwatch are with javascript.
-About forms.py in the account application : I used forms in a way that connected to the User model.
+About register form (forms.py in the account application) : I used forms in a way that connected to the User model so don't have to create a new User object in views.
 Techniques like Flexbox are used and tried to have a responsive project to the different screen sizes.
 
 # File structure description and summary
