@@ -44,15 +44,16 @@ The idea of this project is related to my first JavaFX project and I have tried 
 
 **Back-end** :
 
-- _Python_
-- _SQLite_
+- Python 
+- SQLite
 
 **Front-end** :
 
-- _HTML_
-- _CSS / Sass_
-- _Java script_
-- _Bootstrap_
+- HTML
+- CSS
+- Sass
+- Java script
+- Bootstrap
 
 
 ## How to run the Project:
