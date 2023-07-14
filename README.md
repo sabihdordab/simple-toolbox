@@ -3,7 +3,6 @@
 ## About Project:
 
 A toolbox that has collected several apps, the toolbox has Time tools, Date tools, and Notepad.
-The user can register and log in, after logging in, the user can access the apps and use the toolbox.
 The idea of this project is related to my first JavaFX project and I have tried to program and develop that project with Django.
 
 ![Register page](./pics/register.png)
